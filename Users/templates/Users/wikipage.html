@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>This is the WIKIPAGE!!!</h1><br/>
+<h2><u>User = Guest </u></h2><br/>
+<div class="Researchers" style="background-color:lightblue" align="center">
+ <h3>FOR RESEARCHERS :</h3>
+<h3><a href="{% url 'signup' %}">CLICK TO SIGNUP </a></h3>
+<br/><h3><a href="{% url 'login' %}">CLICK TO LOGIN </a></h3>
+</div>
+<h2>These are the available Articles::</h2>
+<br/>
+<hr />
+<hr/>
+        {% for post in posts.all %}
+        <div class="container" align="center">
+            <h3> Section : {{ post.Section }}</h3><br>
+            <h3> Sub-Section : {{ post.SubSection }}</h3><br>
+        <h3>TITLE :{{ post.title }}</h3>
+            <h4>Written By: <u>{{post.user}}</u></h4>
+
+
+        <br />
+
+            <h4><p>{{ post.article }}</p></h4>
+        <br>
+            <h4><a href="{% url 'Guestinfo' %}">DOWNLOAD</a> </h4>
+            <hr />
+            <hr/>
+            <br>
+        </div>
+        {% endfor %}
+
+
+</body>
+</html>
