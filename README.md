@@ -1,0 +1,3 @@
+# WIKIPAGE-Articles-assignment
+This is a project made using Django framework which consists of a home page called WikiPage which displays all the articles submitted by researchers on the website through their respective accounts and any Guest user can see them. It also consists a login and signup page for researchers to access the dashboard for submitting new articles with various Sections and Subsections.
+the project conatins 3 models 1 for the researcher's account details the other is for articles submitted byh respective researchers and the third one is for storing the guest's information before downloading the article.
